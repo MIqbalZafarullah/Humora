@@ -13,9 +13,9 @@ import {
 export default function Navbar({ activePage, onNavigate, onLogoutClick }) {
   const navItems = [
     { id: 'home', label: 'Beranda', icon: Home },
-    { id: 'kamus', label: 'Kamus', icon: BookOpen },
-    { id: 'penerjemah', label: 'Penerjemah', icon: Languages },
-    { id: 'forum', label: 'Forum', icon: MessageSquare },
+    { id: 'kamus', label: 'Smart Dictionary', icon: BookOpen },
+    { id: 'penerjemah', label: 'Live Interpreter', icon: Languages },
+    { id: 'forum', label: 'Inclusive Community', icon: MessageSquare },
     { id: 'profil', label: 'Profil', icon: User },
     { id: 'pengaturan', label: 'Pengaturan', icon: Settings },
   ];

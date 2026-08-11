@@ -201,7 +201,7 @@ export default function ProfilePage({ currentUser, setCurrentUser, onNavigate, s
                 <FileText className="w-5 h-5" />
               </div>
               <div>
-                <span className="block text-xs font-bold text-slate-400">Postingan Forum</span>
+                <span className="block text-xs font-bold text-slate-400">Inclusive Community</span>
                 <span className="block text-lg font-bold text-slate-800 mt-0.5">1 Postingan</span>
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function ProfilePage({ currentUser, setCurrentUser, onNavigate, s
                 <BookOpen className="w-5 h-5" />
               </div>
               <div>
-                <span className="block text-xs font-bold text-slate-400">Pencarian Kamus</span>
+                <span className="block text-xs font-bold text-slate-400">Smart Dictionary</span>
                 <span className="block text-lg font-bold text-slate-800 mt-0.5">12 Kata</span>
               </div>
             </div>
@@ -221,7 +221,7 @@ export default function ProfilePage({ currentUser, setCurrentUser, onNavigate, s
                 <Languages className="w-5 h-5" />
               </div>
               <div>
-                <span className="block text-xs font-bold text-slate-400">Simulasi Terjemahan</span>
+                <span className="block text-xs font-bold text-slate-400">Live Interpreter</span>
                 <span className="block text-lg font-bold text-slate-800 mt-0.5">24 Sesi</span>
               </div>
             </div>

@@ -115,7 +115,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
           </button>
           <div>
             <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
-              Forum Komunitas
+              Inclusive Community
             </h2>
             <p className="text-sm text-slate-500 font-medium">
               Diskusikan, bagikan cerita, dan jalin relasi inklusif bersama teman tuli dan dengar.
@@ -138,7 +138,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
           <input
             type="text"
-            placeholder="Cari postingan di forum..."
+            placeholder="Cari postingan di Inclusive Community..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-12 pr-4 py-3.5 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none shadow-sm transition-all duration-200"
@@ -243,7 +243,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
           <div className="liquid-glass rounded-3xl p-12 text-center flex flex-col items-center justify-center">
             <MessageSquare className="w-12 h-12 text-slate-300 mb-3" />
             <p className="text-sm font-bold text-slate-500">
-              Tidak ada diskusi forum ditemukan
+              Tidak ada diskusi komunitas ditemukan
             </p>
             <p className="text-xs text-slate-400 mt-1 font-medium">
               Coba gunakan kata kunci pencarian yang lain.

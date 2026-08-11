@@ -103,7 +103,7 @@ export default function FeatureDetectionPage({ onNavigate, showToast }) {
         </button>
         <div>
           <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
-            Penerjemah Real-Time
+            Live Interpreter
           </h2>
           <p className="text-sm text-slate-500 font-medium">
             Terjemahkan komunikasi verbal ke teks, atau bahasa isyarat ke teks.
@@ -149,7 +149,7 @@ export default function FeatureDetectionPage({ onNavigate, showToast }) {
           {activeTab === 'suara' && (
             <div className="liquid-glass rounded-[36px] border border-white/80 p-8 shadow-2xl text-center space-y-8">
               <h3 className="text-lg font-bold text-slate-800">
-                Penerjemah Suara ke Teks
+                Live Interpreter (Suara ke Teks)
               </h3>
               
               {/* Mic Icon & Wave Visualizer Container */}
@@ -206,7 +206,7 @@ export default function FeatureDetectionPage({ onNavigate, showToast }) {
             <div className="liquid-glass rounded-[36px] border border-white/80 p-8 shadow-2xl space-y-6">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-bold text-slate-800">
-                  Penerjemah Bahasa Isyarat ke Teks
+                  Live Interpreter (Bahasa Isyarat ke Teks)
                 </h3>
                 <button
                   onClick={toggleCamera}

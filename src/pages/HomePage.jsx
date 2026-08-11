@@ -13,7 +13,7 @@ export default function HomePage({ currentUser, onNavigate }) {
   const features = [
     {
       id: 'kamus',
-      title: 'Kamus Digital BISINDO & SIBI',
+      title: 'Smart Dictionary',
       description: 'Cari kata atau frasa dan saksikan representasi bahasa isyarat visual secara instan menggunakan standardisasi BISINDO dan SIBI.',
       icon: BookOpen,
       color: 'bg-blue-500/10 text-blue-600 border-blue-200/50',
@@ -22,7 +22,7 @@ export default function HomePage({ currentUser, onNavigate }) {
     },
     {
       id: 'penerjemah',
-      title: 'Penerjemah Real-Time',
+      title: 'Live Interpreter',
       description: 'Simulasi komunikasi dua arah yang lancar. Terjemahkan suara ke teks, serta gerakan tangan isyarat Anda langsung menjadi teks.',
       icon: Languages,
       color: 'bg-sky-500/10 text-sky-600 border-sky-200/50',
@@ -31,7 +31,7 @@ export default function HomePage({ currentUser, onNavigate }) {
     },
     {
       id: 'forum',
-      title: 'Forum Komunitas',
+      title: 'Inclusive Community',
       description: 'Ruang interaksi inklusif untuk berdiskusi, bertanya, berbagi pengalaman hidup, dan terhubung dengan sesama teman tuli dan dengar.',
       icon: MessageSquare,
       color: 'bg-indigo-500/10 text-indigo-600 border-indigo-200/50',
@@ -58,7 +58,7 @@ export default function HomePage({ currentUser, onNavigate }) {
             Selamat Datang di SIGNIA.
           </h1>
           <p className="text-slate-200 text-sm md:text-base leading-relaxed max-w-2xl font-medium">
-            SIGNIA hadir untuk meruntuhkan batasan komunikasi. Kami menyediakan alat penerjemahan real-time, kamus digital yang komprehensif, dan komunitas yang ramah untuk menghubungkan teman tuli dan dengar.
+            SIGNIA hadir untuk meruntuhkan batasan komunikasi. Kami menyediakan alat Live Interpreter, Smart Dictionary yang komprehensif, dan Inclusive Community yang ramah untuk menghubungkan teman tuli dan dengar.
           </p>
         </div>
       </section>

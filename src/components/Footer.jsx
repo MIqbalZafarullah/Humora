@@ -15,9 +15,9 @@ export default function Footer({ onNavigate }) {
           
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-slate-500 font-medium">
             <button onClick={() => onNavigate('home')} className="hover:text-primary-500 transition-colors">Beranda</button>
-            <button onClick={() => onNavigate('kamus')} className="hover:text-primary-500 transition-colors">Kamus BISINDO & SIBI</button>
-            <button onClick={() => onNavigate('penerjemah')} className="hover:text-primary-500 transition-colors">Penerjemah Real-Time</button>
-            <button onClick={() => onNavigate('forum')} className="hover:text-primary-500 transition-colors">Forum Komunitas</button>
+            <button onClick={() => onNavigate('kamus')} className="hover:text-primary-500 transition-colors">Smart Dictionary</button>
+            <button onClick={() => onNavigate('penerjemah')} className="hover:text-primary-500 transition-colors">Live Interpreter</button>
+            <button onClick={() => onNavigate('forum')} className="hover:text-primary-500 transition-colors">Inclusive Community</button>
           </div>
         </div>
         

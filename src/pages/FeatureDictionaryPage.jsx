@@ -140,7 +140,7 @@ export default function FeatureDictionaryPage({ onNavigate, showToast }) {
         </button>
         <div>
           <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
-            Kamus Digital BISINDO & SIBI
+            Smart Dictionary
           </h2>
           <p className="text-sm text-slate-500 font-medium">
             Cari kata dan lihat representasi bahasa isyarat visual terstandardisasi.

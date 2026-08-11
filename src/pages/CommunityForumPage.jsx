@@ -202,38 +202,42 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
                 </p>
               </div>
 
-              {/* Interaction Buttons */}
-              <div className="flex items-center gap-6 pt-4 border-t border-slate-200/50 text-slate-500 text-xs font-semibold">
-                <button 
-                  onClick={() => handleLike(post.id)}
-                  className="flex items-center gap-1.5 hover:text-primary-600 transition-colors active:scale-95"
-                >
-                  <ThumbsUp className="w-4 h-4 text-primary-500" />
-                  {post.likes} Suka
-                </button>
-                
-                <button 
-                  onClick={() => showToast('Membuka halaman detail komentar (simulasi)')}
-                  className="flex items-center gap-1.5 hover:text-primary-600 transition-colors active:scale-95"
-                >
-                  <MessageCircle className="w-4 h-4 text-slate-400" />
-                  {post.comments} Komentar
-                </button>
-                
-                <span className="flex items-center gap-1.5 text-slate-400">
-                  <Eye className="w-4 h-4" />
-                  {post.views} Dilihat
-                </span>
-                
+              {/* Interaction Buttons (Icons + Counts Only for Clean Mobile Responsive View) */}
+              <div className="flex items-center justify-between pt-4 border-t border-slate-200/50 text-slate-500 text-xs font-semibold">
+                <div className="flex items-center gap-3 sm:gap-6">
+                  <button 
+                    onClick={() => handleLike(post.id)}
+                    className="flex items-center gap-1.5 hover:text-primary-600 transition-colors active:scale-95 py-1 px-2 rounded-lg hover:bg-slate-100/60"
+                    title="Suka"
+                  >
+                    <ThumbsUp className="w-4 h-4 text-primary-500" />
+                    <span>{post.likes}</span>
+                  </button>
+                  
+                  <button 
+                    onClick={() => showToast('Membuka halaman detail komentar (simulasi)')}
+                    className="flex items-center gap-1.5 hover:text-primary-600 transition-colors active:scale-95 py-1 px-2 rounded-lg hover:bg-slate-100/60"
+                    title="Komentar"
+                  >
+                    <MessageCircle className="w-4 h-4 text-slate-400" />
+                    <span>{post.comments}</span>
+                  </button>
+                  
+                  <span className="flex items-center gap-1.5 text-slate-400 py-1 px-2" title="Dilihat">
+                    <Eye className="w-4 h-4" />
+                    <span>{post.views}</span>
+                  </span>
+                </div>
+
                 <button 
                   onClick={() => {
                     navigator.clipboard.writeText(post.title);
                     showToast('Link postingan berhasil disalin!');
                   }}
-                  className="flex items-center gap-1.5 hover:text-primary-600 transition-colors ml-auto active:scale-95"
+                  className="flex items-center gap-1.5 hover:text-primary-600 transition-colors active:scale-95 py-1 px-2 rounded-lg hover:bg-slate-100/60 text-slate-400 hover:text-primary-600"
+                  title="Bagikan"
                 >
                   <Share2 className="w-4 h-4" />
-                  Bagikan
                 </button>
               </div>
 

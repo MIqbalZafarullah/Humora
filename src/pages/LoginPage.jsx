@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SigniaLogo from '../components/SigniaLogo';
-import { Mail, Lock, Eye, EyeOff, Sparkles } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
 export default function LoginPage({ onLoginSuccess }) {
   const [email, setEmail] = useState('');
@@ -11,23 +11,14 @@ export default function LoginPage({ onLoginSuccess }) {
     e.preventDefault();
     onLoginSuccess({
       name: 'Rian Adiputra',
-      email: email || 'rian.adi@gmail.com',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&h=256&auto=format&fit=crop',
-      bio: 'Pengguna umum yang tertarik belajar bahasa isyarat untuk berkomunikasi dengan teman tuli.'
-    });
-  };
-
-  const handleDemoLogin = () => {
-    onLoginSuccess({
-      name: 'Rian Adiputra',
-      email: 'rian.adi@gmail.com',
+      email: email || 'demo@signia.id',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&h=256&auto=format&fit=crop',
       bio: 'Pengguna umum yang tertarik belajar bahasa isyarat untuk berkomunikasi dengan teman tuli.'
     });
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 sm:p-6 relative overflow-hidden">
       
       {/* Background Ambient Mesh Light Spheres */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -36,21 +27,21 @@ export default function LoginPage({ onLoginSuccess }) {
       </div>
 
       {/* Floating Liquid Glass Card */}
-      <div className="w-full max-w-[480px] liquid-glass rounded-[36px] p-8 md:p-10 border border-white/80 shadow-2xl relative z-10">
+      <div className="w-full max-w-[440px] liquid-glass rounded-[32px] sm:rounded-[36px] p-6 sm:p-8 md:p-10 border border-white/80 shadow-2xl relative z-10">
         
         {/* Header Logo */}
         <div className="flex flex-col items-center text-center mb-8">
           <SigniaLogo size={68} showText={false} className="mb-4 drop-shadow-md" />
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">
             Masuk ke SIGNIA
           </h2>
-          <p className="text-sm text-slate-500 font-medium mt-2">
+          <p className="text-xs sm:text-sm text-slate-500 font-medium mt-2">
             Jembatan komunikasi digital teman tuli dan dengar
           </p>
         </div>
 
         {/* Login Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
               Email atau Username
@@ -59,10 +50,9 @@ export default function LoginPage({ onLoginSuccess }) {
               <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input
                 type="text"
-                placeholder="rian.adi@gmail.com"
+                placeholder="Masukkan teks..."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required
                 className="w-full pl-12 pr-4 py-3.5 bg-white/70 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none transition-all duration-200 shadow-sm"
               />
             </div>
@@ -76,10 +66,9 @@ export default function LoginPage({ onLoginSuccess }) {
               <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input
                 type={showPassword ? 'text' : 'password'}
-                placeholder="••••••••"
+                placeholder="Masukkan teks..."
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                required
                 className="w-full pl-12 pr-12 py-3.5 bg-white/70 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none transition-all duration-200 shadow-sm"
               />
               <button
@@ -92,45 +81,35 @@ export default function LoginPage({ onLoginSuccess }) {
             </div>
           </div>
 
-          <div className="flex items-center justify-between text-sm">
+          <div className="flex items-center justify-between text-xs sm:text-sm">
             <label className="flex items-center gap-2 cursor-pointer text-slate-600 font-medium">
               <input type="checkbox" className="rounded border-slate-300 text-primary-500 focus:ring-primary-500 w-4 h-4" />
               Ingat saya
             </label>
-            <a href="#forgot" className="text-primary-600 font-bold hover:text-primary-700">
+            <a href="#forgot" onClick={(e) => e.preventDefault()} className="text-primary-600 font-bold hover:text-primary-700">
               Lupa sandi?
             </a>
           </div>
 
           <button
             type="submit"
-            className="w-full py-3.5 liquid-btn-primary text-white font-semibold rounded-2xl shadow-lg"
+            className="w-full py-3.5 liquid-btn-primary text-white font-semibold rounded-2xl shadow-lg active:scale-98 transition-all"
           >
             Masuk
           </button>
         </form>
 
-        {/* Divider */}
-        <div className="relative my-8 text-center">
-          <hr className="border-slate-200/60" />
-          <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-white/90 backdrop-blur-md text-xs font-bold text-slate-400 uppercase tracking-widest rounded-full">
-            Atau
-          </span>
+        {/* Subtle Demo Credentials Info */}
+        <div className="mt-6 text-center text-xs text-slate-500 bg-slate-100/70 backdrop-blur-sm py-2.5 px-4 rounded-xl border border-slate-200/60 shadow-xs">
+          <p className="font-medium">
+            <span className="font-semibold text-slate-700">Username:</span> demo &nbsp;|&nbsp; <span className="font-semibold text-slate-700">Password:</span> demo123
+          </p>
         </div>
 
-        {/* Demo Login Button */}
-        <button
-          onClick={handleDemoLogin}
-          className="w-full py-3.5 bg-sky-50/80 hover:bg-sky-100/90 text-sky-700 font-bold rounded-2xl border border-sky-200/60 backdrop-blur-md transition-all duration-200 mb-6 flex items-center justify-center gap-2 shadow-sm active:scale-98"
-        >
-          <Sparkles className="w-4 h-4 text-sky-500" />
-          Masuk Instan (1-Klik Demo)
-        </button>
-
         {/* Register Option */}
-        <p className="text-center text-sm text-slate-600 font-medium">
+        <p className="text-center text-xs sm:text-sm text-slate-600 font-medium mt-6">
           Belum punya akun?{' '}
-          <a href="#register" className="text-primary-600 font-bold hover:text-primary-700">
+          <a href="#register" onClick={(e) => e.preventDefault()} className="text-primary-600 font-bold hover:text-primary-700">
             Daftar Sekarang
           </a>
         </p>

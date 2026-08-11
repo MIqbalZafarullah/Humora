@@ -89,8 +89,8 @@ export default function Navbar({ activePage, onNavigate, onLogoutClick }) {
       </header>
 
       {/* Mobile Bottom Liquid Navigation Bar */}
-      <nav className="fixed bottom-3 left-4 right-4 z-40 md:hidden">
-        <div className="h-16 rounded-2xl liquid-glass grid grid-cols-6 items-center px-1">
+      <nav className="fixed bottom-3 left-2 right-2 z-40 md:hidden">
+        <div className="h-16 rounded-2xl liquid-glass grid grid-cols-6 items-center px-1 border border-white/80 shadow-2xl">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activePage === item.id;
@@ -98,12 +98,12 @@ export default function Navbar({ activePage, onNavigate, onLogoutClick }) {
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
-                className={`flex flex-col items-center justify-center gap-1 transition-all duration-200 ${
+                className={`flex flex-col items-center justify-center gap-0.5 transition-all duration-200 py-1 ${
                   isActive ? 'text-primary-600 font-bold scale-105' : 'text-slate-400 hover:text-slate-600'
                 }`}
               >
-                <Icon className="w-5 h-5" />
-                <span className="text-[10px] tracking-tight">{item.label}</span>
+                <Icon className="w-5 h-5 shrink-0" />
+                <span className="text-[9px] leading-none tracking-tighter text-center truncate max-w-full px-0.5">{item.label}</span>
               </button>
             );
           })}

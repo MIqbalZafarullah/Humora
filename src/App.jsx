@@ -94,7 +94,7 @@ export default function App() {
       />
 
       {/* Main Spacious Content Area with Liquid Glass Backdrop */}
-      <main className="flex-1 w-full max-w-7xl mx-auto px-6 lg:px-8 py-10 md:py-12 relative z-10">
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 pb-28 md:pb-12 relative z-10">
         {renderPage()}
       </main>
 

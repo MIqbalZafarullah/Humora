@@ -25,7 +25,7 @@ export default function App() {
   const handleLogoutConfirm = () => {
     setCurrentUser(null);
     setIsLogoutModalOpen(false);
-    showToast('Anda berhasil keluar.');
+    showToast('Anda berhasil keluar dari Humora.');
   };
 
   // If not logged in, force login screen
@@ -74,26 +74,26 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col relative overflow-hidden">
+    <div className="min-h-screen bg-[#faf7f2] flex flex-col relative overflow-hidden text-[#1c2826]">
       
-      {/* Background Ambient Mesh Light Spheres (Apple Liquid Light Effect) */}
+      {/* Background Ambient Mesh Light Spheres */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        {/* Soft Blue Orb top-right */}
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-blue-400/20 via-sky-300/15 to-transparent blur-[100px] animate-mesh-1" />
-        {/* Soft Indigo Orb mid-left */}
-        <div className="absolute top-[35%] left-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-indigo-300/15 via-blue-200/10 to-transparent blur-[120px] animate-mesh-2" />
-        {/* Soft Sky Orb bottom-right */}
-        <div className="absolute bottom-[-10%] right-[15%] w-[450px] h-[450px] rounded-full bg-gradient-to-tl from-sky-400/15 via-blue-300/10 to-transparent blur-[90px] animate-mesh-1" />
+        {/* Soft Mint Teal Orb top-right */}
+        <div className="absolute top-[-10%] right-[-5%] w-[550px] h-[550px] rounded-full bg-gradient-to-br from-[#2dd4bf]/20 via-[#14b8a6]/15 to-transparent blur-[110px] animate-mesh-1" />
+        {/* Soft Forest Green Orb mid-left */}
+        <div className="absolute top-[35%] left-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-[#0c4a3e]/15 via-[#126454]/10 to-transparent blur-[130px] animate-mesh-2" />
+        {/* Soft Amber Glow Orb bottom-right */}
+        <div className="absolute bottom-[-10%] right-[15%] w-[450px] h-[450px] rounded-full bg-gradient-to-tl from-[#f59e0b]/15 via-[#d9f99d]/15 to-transparent blur-[100px] animate-mesh-1" />
       </div>
 
-      {/* Top and Bottom Liquid Navigation Bars */}
+      {/* Top and Bottom Navigation Bars */}
       <Navbar 
         activePage={activePage} 
         onNavigate={setActivePage} 
         onLogoutClick={() => setIsLogoutModalOpen(true)} 
       />
 
-      {/* Main Spacious Content Area with Liquid Glass Backdrop */}
+      {/* Main Spacious Content Area */}
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 pb-28 md:pb-12 relative z-10">
         {renderPage()}
       </main>

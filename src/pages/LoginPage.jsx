@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SigniaLogo from '../components/SigniaLogo';
+import HumoraLogo from '../components/HumoraLogo';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
 export default function LoginPage({ onLoginSuccess }) {
@@ -11,31 +11,31 @@ export default function LoginPage({ onLoginSuccess }) {
     e.preventDefault();
     onLoginSuccess({
       name: 'Rian Adiputra',
-      email: email || 'demo@signia.id',
+      email: email || 'demo@humora.id',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&h=256&auto=format&fit=crop',
       bio: 'Pengguna umum yang tertarik belajar bahasa isyarat untuk berkomunikasi dengan teman tuli.'
     });
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 sm:p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-[#faf7f2] flex items-center justify-center p-4 sm:p-6 relative overflow-hidden">
       
       {/* Background Ambient Mesh Light Spheres */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-blue-400/25 to-sky-300/20 blur-[120px] animate-mesh-1" />
-        <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] rounded-full bg-gradient-to-tr from-indigo-400/20 to-blue-300/15 blur-[100px] animate-mesh-2" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#2dd4bf]/20 to-[#14b8a6]/15 blur-[120px] animate-mesh-1" />
+        <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] rounded-full bg-gradient-to-tr from-[#f59e0b]/15 to-[#0c4a3e]/10 blur-[100px] animate-mesh-2" />
       </div>
 
       {/* Floating Liquid Glass Card */}
-      <div className="w-full max-w-[440px] liquid-glass rounded-[32px] sm:rounded-[36px] p-6 sm:p-8 md:p-10 border border-white/80 shadow-2xl relative z-10">
+      <div className="w-full max-w-[440px] liquid-glass rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 md:p-10 border border-white/90 shadow-2xl relative z-10">
         
         {/* Header Logo */}
         <div className="flex flex-col items-center text-center mb-8">
-          <SigniaLogo size={68} showText={false} className="mb-4 drop-shadow-md" />
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">
-            Masuk ke SIGNIA
+          <HumoraLogo size={72} showText={false} className="mb-4 drop-shadow-sm" />
+          <h2 className="text-3xl font-serif font-bold text-[#0c4a3e]">
+            Masuk ke Humora
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 font-medium mt-2">
+          <p className="text-xs sm:text-sm text-slate-600 font-medium mt-2">
             Jembatan komunikasi digital teman tuli dan dengar
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function LoginPage({ onLoginSuccess }) {
         {/* Login Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+            <label className="block text-xs font-bold text-[#0c4a3e]/70 uppercase tracking-wider mb-2">
               Email atau Username
             </label>
             <div className="relative">
@@ -53,13 +53,13 @@ export default function LoginPage({ onLoginSuccess }) {
                 placeholder="Masukkan teks..."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-12 pr-4 py-3.5 bg-white/70 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none transition-all duration-200 shadow-sm"
+                className="w-full pl-12 pr-4 py-3.5 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-[#0c4a3e] focus:outline-none transition-all duration-200 shadow-xs"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+            <label className="block text-xs font-bold text-[#0c4a3e]/70 uppercase tracking-wider mb-2">
               Kata Sandi
             </label>
             <div className="relative">
@@ -69,7 +69,7 @@ export default function LoginPage({ onLoginSuccess }) {
                 placeholder="Masukkan teks..."
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-12 pr-12 py-3.5 bg-white/70 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none transition-all duration-200 shadow-sm"
+                className="w-full pl-12 pr-12 py-3.5 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-[#0c4a3e] focus:outline-none transition-all duration-200 shadow-xs"
               />
               <button
                 type="button"
@@ -83,10 +83,10 @@ export default function LoginPage({ onLoginSuccess }) {
 
           <div className="flex items-center justify-between text-xs sm:text-sm">
             <label className="flex items-center gap-2 cursor-pointer text-slate-600 font-medium">
-              <input type="checkbox" className="rounded border-slate-300 text-primary-500 focus:ring-primary-500 w-4 h-4" />
+              <input type="checkbox" className="rounded border-slate-300 text-[#0c4a3e] focus:ring-[#0c4a3e] w-4 h-4" />
               Ingat saya
             </label>
-            <a href="#forgot" onClick={(e) => e.preventDefault()} className="text-primary-600 font-bold hover:text-primary-700">
+            <a href="#forgot" onClick={(e) => e.preventDefault()} className="text-[#0c4a3e] font-bold hover:text-[#0d9488]">
               Lupa sandi?
             </a>
           </div>
@@ -99,17 +99,17 @@ export default function LoginPage({ onLoginSuccess }) {
           </button>
         </form>
 
-        {/* Subtle Demo Credentials Info */}
-        <div className="mt-6 text-center text-xs text-slate-500 bg-slate-100/70 backdrop-blur-sm py-2.5 px-4 rounded-xl border border-slate-200/60 shadow-xs">
+        {/* Demo Credentials Info */}
+        <div className="mt-6 text-center text-xs text-slate-600 bg-amber-50/70 backdrop-blur-sm py-2.5 px-4 rounded-xl border border-amber-200/60 shadow-xs">
           <p className="font-medium">
-            <span className="font-semibold text-slate-700">Username:</span> demo &nbsp;|&nbsp; <span className="font-semibold text-slate-700">Password:</span> demo123
+            <span className="font-semibold text-slate-800">Username:</span> demo &nbsp;|&nbsp; <span className="font-semibold text-slate-800">Password:</span> demo123
           </p>
         </div>
 
         {/* Register Option */}
         <p className="text-center text-xs sm:text-sm text-slate-600 font-medium mt-6">
           Belum punya akun?{' '}
-          <a href="#register" onClick={(e) => e.preventDefault()} className="text-primary-600 font-bold hover:text-primary-700">
+          <a href="#register" onClick={(e) => e.preventDefault()} className="text-[#0c4a3e] font-bold hover:text-[#0d9488]">
             Daftar Sekarang
           </a>
         </p>

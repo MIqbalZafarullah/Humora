@@ -1,70 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
   
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-300: #5eead4;
+  --color-primary-400: #2dd4bf;
+  --color-primary-500: #14b8a6;
+  --color-primary-600: #0d9488;
+  --color-primary-700: #0f766e;
+  --color-primary-800: #115e59;
+  --color-primary-900: #0c4a3e;
+  --color-primary-950: #062c25;
   
-  --color-accent-blue: #0ea5e9;
-  --color-accent-indigo: #6366f1;
+  --color-accent-amber: #f59e0b;
+  --color-accent-lime: #d9f99d;
+  --color-accent-orange: #f97316;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #faf7f2;
+  color: #1c2826;
   margin: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-serif {
+  font-family: var(--font-serif);
+}
+
 /* =========================================================
-   LIQUID GLASS DESIGN SYSTEM (macOS & iOS Inspired)
+   HUMORA ORGANIC LIQUID GLASS DESIGN SYSTEM
    ========================================================= */
 
-/* Main Translucent Liquid Glass Surface */
+/* Main Translucent Organic Glass Surface */
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(20px) saturate(190%);
-  -webkit-backdrop-filter: blur(20px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 253, 248, 0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow: 
-    0 16px 40px -12px rgba(15, 23, 42, 0.05),
-    0 4px 16px -4px rgba(15, 23, 42, 0.02),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 16px 40px -12px rgba(12, 74, 62, 0.06),
+    0 4px 16px -4px rgba(12, 74, 62, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
-/* Liquid Glass with Subtle Blue Accent Glow */
-.liquid-glass-blue {
-  background: rgba(239, 246, 255, 0.65);
+/* Liquid Glass with Teal Accent Glow */
+.liquid-glass-teal {
+  background: rgba(240, 253, 244, 0.75);
   backdrop-filter: blur(20px) saturate(190%);
   -webkit-backdrop-filter: blur(20px) saturate(190%);
-  border: 1px solid rgba(191, 219, 254, 0.6);
+  border: 1px solid rgba(153, 246, 228, 0.7);
   box-shadow: 
-    0 20px 45px -12px rgba(37, 99, 235, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 20px 45px -12px rgba(13, 148, 136, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
-/* Dark Mode Liquid Glass */
-.liquid-glass-dark {
-  background: rgba(15, 23, 42, 0.78);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+/* Deep Forest Dark Glass (Helixora style) */
+.liquid-glass-forest {
+  background: #0c4a3e;
+  color: #faf7f2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
-    0 20px 50px -10px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    0 20px 50px -10px rgba(6, 44, 37, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Specular Top Border Highlight */
@@ -79,24 +85,31 @@ body {
   left: 10%;
   right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent);
   pointer-events: none;
 }
 
-/* Glass Pill Badge */
+/* Glass Pill Badges */
 .glass-pill {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 14px rgba(12, 74, 62, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Interactive Liquid Glass Button */
+.glass-pill-lime {
+  background: #d9f99d;
+  color: #0c4a3e;
+  border: 1px solid #bef264;
+  box-shadow: 0 4px 12px rgba(190, 242, 100, 0.25);
+}
+
+/* Interactive Buttons */
 .liquid-btn-primary {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #0c4a3e 0%, #0d9488 100%);
   box-shadow: 
-    0 10px 25px -5px rgba(37, 99, 235, 0.35),
+    0 10px 25px -5px rgba(12, 74, 62, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -104,11 +117,30 @@ body {
 .liquid-btn-primary:hover {
   transform: translateY(-2px) scale(1.01);
   box-shadow: 
-    0 16px 32px -6px rgba(37, 99, 235, 0.45),
+    0 16px 32px -6px rgba(12, 74, 62, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .liquid-btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.liquid-btn-orange {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  box-shadow: 
+    0 10px 25px -5px rgba(249, 115, 22, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-btn-orange:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 
+    0 16px 32px -6px rgba(249, 115, 22, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.liquid-btn-orange:active {
   transform: translateY(0) scale(0.98);
 }
 
@@ -142,13 +174,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(203, 213, 225, 0.7);
+  background: rgba(13, 148, 136, 0.3);
   border-radius: 99px;
   backdrop-filter: blur(4px);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.9);
+  background: rgba(12, 74, 62, 0.5);
 }
 
 /* Audio wave animation */

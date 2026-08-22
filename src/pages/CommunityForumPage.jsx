@@ -29,7 +29,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
       role: 'Dengar (Belajar Isyarat)',
       time: '2 jam yang lalu',
       title: 'Tips Cepat Belajar Alfabet BISINDO untuk Pemula!',
-      content: 'Halo teman-teman! Saya baru belajar BISINDO selama sebulan ini dan ingin membagikan tips menghafal alfabet tangan. Kuncinya adalah melatih jari Anda di depan cermin selama 10 menit setiap pagi. Cermin membantu memastikan bentuk tangan kita sudah akurat!',
+      content: 'Halo teman-teman Humora! Saya baru belajar BISINDO selama sebulan ini dan ingin membagikan tips menghafal alfabet tangan. Kuncinya adalah melatih jari Anda di depan cermin selama 10 menit setiap pagi. Cermin membantu memastikan bentuk tangan kita sudah akurat!',
       category: 'Belajar',
       comments: 15,
       likes: 48,
@@ -53,7 +53,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
       role: 'Relawan & JBI',
       time: '1 hari yang lalu',
       title: 'Bagaimana Pengalaman Kalian Mengenai Aksesibilitas di Tempat Umum?',
-      content: 'Hai kawan-kawan. Saya sedang melakukan survei kecil mengenai sarana publik ramah disabilitas di Jakarta. Boleh dong bagikan pengalaman atau masukan kalian mengenai hal yang paling darurat perlu dibenahi di stasiun kereta atau halte bis kita?',
+      content: 'Hai kawan-kawan Humora. Saya sedang melakukan survei kecil mengenai sarana publik ramah disabilitas di Jakarta. Boleh dong bagikan pengalaman atau masukan kalian mengenai hal yang paling darurat perlu dibenahi di stasiun kereta atau halte bis kita?',
       category: 'Aksesibilitas',
       comments: 32,
       likes: 96,
@@ -109,15 +109,15 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
         <div className="flex items-center gap-4">
           <button 
             onClick={() => onNavigate('home')}
-            className="p-2.5 rounded-2xl liquid-glass text-slate-600 hover:text-primary-600 hover:border-primary-200 transition-all duration-200 active:scale-95 shadow-sm"
+            className="p-2.5 rounded-2xl liquid-glass text-[#0c4a3e] hover:bg-white transition-all duration-200 active:scale-95 shadow-xs"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
           <div>
-            <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
+            <h2 className="text-3xl font-serif font-bold text-[#0c4a3e]">
               Inclusive Community
             </h2>
-            <p className="text-sm text-slate-500 font-medium">
+            <p className="text-sm text-slate-600 font-medium">
               Diskusikan, bagikan cerita, dan jalin relasi inklusif bersama teman tuli dan dengar.
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="flex items-center justify-center gap-2 px-6 py-3.5 liquid-btn-primary text-white font-semibold text-sm rounded-2xl shadow-lg self-start sm:self-center"
+          className="flex items-center justify-center gap-2 px-6 py-3.5 liquid-btn-primary text-white font-semibold text-sm rounded-2xl shadow-lg self-start sm:self-center active:scale-95"
         >
           <Plus className="w-4 h-4" />
           Buat Postingan
@@ -141,7 +141,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
             placeholder="Cari postingan di Inclusive Community..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-4 py-3.5 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none shadow-sm transition-all duration-200"
+            className="w-full pl-12 pr-4 py-3.5 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-[#0c4a3e] focus:outline-none shadow-xs transition-all duration-200"
           />
         </div>
 
@@ -152,8 +152,8 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
               onClick={() => setSelectedTag(tag)}
               className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all duration-200 ${
                 selectedTag === tag
-                  ? 'bg-slate-900 text-white shadow-md'
-                  : 'glass-pill text-slate-600 hover:border-slate-300'
+                  ? 'bg-[#0c4a3e] text-[#d9f99d] shadow-md'
+                  : 'glass-pill text-slate-700 hover:border-slate-300'
               }`}
             >
               {tag}
@@ -168,17 +168,17 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
           filteredPosts.map((post) => (
             <article 
               key={post.id}
-              className="liquid-glass rounded-[36px] p-6 md:p-8 border border-white/80 shadow-xl hover:border-primary-200/60 transition-all duration-300 space-y-4 hover:-translate-y-0.5"
+              className="liquid-glass rounded-[36px] p-6 md:p-8 border border-white/90 shadow-xl hover:border-[#0c4a3e]/30 transition-all duration-300 space-y-4 hover:-translate-y-0.5"
             >
               {/* Post Author Info */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary-500/10 text-primary-600 font-bold text-sm flex items-center justify-center border border-primary-200/40">
+                  <div className="w-10 h-10 rounded-xl bg-[#0c4a3e] text-[#d9f99d] font-serif font-bold text-base flex items-center justify-center border border-[#0c4a3e]/20">
                     {post.author.charAt(0)}
                   </div>
                   <div>
-                    <span className="block text-sm font-bold text-slate-800">{post.author}</span>
-                    <span className="block text-[11px] font-semibold text-slate-400 mt-0.5">{post.role}</span>
+                    <span className="block text-sm font-bold text-slate-900">{post.author}</span>
+                    <span className="block text-[11px] font-semibold text-slate-500 mt-0.5">{post.role}</span>
                   </div>
                 </div>
 
@@ -186,7 +186,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
                   <span className="text-[11px] text-slate-400 font-medium">
                     {post.time}
                   </span>
-                  <span className="px-2.5 py-1 glass-pill text-slate-700 text-[10px] font-bold rounded-lg uppercase">
+                  <span className="px-2.5 py-1 glass-pill-lime text-[10px] font-bold rounded-lg uppercase">
                     {post.category}
                   </span>
                 </div>
@@ -194,29 +194,29 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
 
               {/* Title & Body */}
               <div className="space-y-2">
-                <h3 className="text-xl font-bold text-slate-900 hover:text-primary-600 cursor-pointer transition-colors">
+                <h3 className="text-2xl font-serif font-bold text-[#0c4a3e] hover:text-teal-700 cursor-pointer transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 font-medium">
+                <p className="text-slate-700 text-sm leading-relaxed line-clamp-3 font-medium">
                   {post.content}
                 </p>
               </div>
 
-              {/* Interaction Buttons (Icons + Counts Only for Clean Mobile Responsive View) */}
-              <div className="flex items-center justify-between pt-4 border-t border-slate-200/50 text-slate-500 text-xs font-semibold">
+              {/* Interaction Buttons (Icons + Counts Only for Mobile Space Optimization) */}
+              <div className="flex items-center justify-between pt-4 border-t border-slate-200/60 text-slate-500 text-xs font-semibold">
                 <div className="flex items-center gap-3 sm:gap-6">
                   <button 
                     onClick={() => handleLike(post.id)}
-                    className="flex items-center gap-1.5 hover:text-primary-600 transition-colors active:scale-95 py-1 px-2 rounded-lg hover:bg-slate-100/60"
+                    className="flex items-center gap-1.5 hover:text-[#0c4a3e] transition-colors active:scale-95 py-1 px-2.5 rounded-lg hover:bg-emerald-50"
                     title="Suka"
                   >
-                    <ThumbsUp className="w-4 h-4 text-primary-500" />
+                    <ThumbsUp className="w-4 h-4 text-[#0c4a3e]" />
                     <span>{post.likes}</span>
                   </button>
                   
                   <button 
                     onClick={() => showToast('Membuka halaman detail komentar (simulasi)')}
-                    className="flex items-center gap-1.5 hover:text-primary-600 transition-colors active:scale-95 py-1 px-2 rounded-lg hover:bg-slate-100/60"
+                    className="flex items-center gap-1.5 hover:text-[#0c4a3e] transition-colors active:scale-95 py-1 px-2.5 rounded-lg hover:bg-emerald-50"
                     title="Komentar"
                   >
                     <MessageCircle className="w-4 h-4 text-slate-400" />
@@ -234,7 +234,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
                     navigator.clipboard.writeText(post.title);
                     showToast('Link postingan berhasil disalin!');
                   }}
-                  className="flex items-center gap-1.5 hover:text-primary-600 transition-colors active:scale-95 py-1 px-2 rounded-lg hover:bg-slate-100/60 text-slate-400 hover:text-primary-600"
+                  className="flex items-center gap-1.5 hover:text-[#0c4a3e] transition-colors active:scale-95 py-1 px-2 rounded-lg hover:bg-emerald-50 text-slate-400"
                   title="Bagikan"
                 >
                   <Share2 className="w-4 h-4" />
@@ -246,39 +246,39 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
         ) : (
           <div className="liquid-glass rounded-3xl p-12 text-center flex flex-col items-center justify-center">
             <MessageSquare className="w-12 h-12 text-slate-300 mb-3" />
-            <p className="text-sm font-bold text-slate-500">
+            <p className="text-sm font-bold text-[#0c4a3e]">
               Tidak ada diskusi komunitas ditemukan
             </p>
-            <p className="text-xs text-slate-400 mt-1 font-medium">
+            <p className="text-xs text-slate-500 mt-1 font-medium">
               Coba gunakan kata kunci pencarian yang lain.
             </p>
           </div>
         )}
       </div>
 
-      {/* Modal: Write Post (Liquid Glass Modal) */}
+      {/* Modal: Write Post */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div 
-            className="absolute inset-0 bg-slate-950/40 backdrop-blur-md"
+            className="absolute inset-0 bg-[#062c25]/40 backdrop-blur-md"
             onClick={() => setIsModalOpen(false)}
           />
           
-          <div className="relative liquid-glass rounded-[36px] p-6 md:p-8 max-w-lg w-full border border-white/80 shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+          <div className="relative liquid-glass rounded-[36px] p-6 md:p-8 max-w-lg w-full border border-white/90 shadow-2xl animate-in fade-in zoom-in-95 duration-200">
             <button 
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100/60 transition-colors"
+              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <h3 className="text-xl font-bold text-slate-900 mb-6">
+            <h3 className="text-2xl font-serif font-bold text-[#0c4a3e] mb-6">
               Buat Postingan Baru
             </h3>
 
             <form onSubmit={handleCreatePost} className="space-y-4">
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-[#0c4a3e]/70 uppercase tracking-wider mb-2">
                   Judul Postingan
                 </label>
                 <input
@@ -287,19 +287,19 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
                   required
-                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none transition-all duration-200"
+                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-[#0c4a3e] focus:outline-none transition-all duration-200"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-bold text-[#0c4a3e]/70 uppercase tracking-wider mb-2">
                     Kategori
                   </label>
                   <select
                     value={newCategory}
                     onChange={(e) => setNewCategory(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none transition-all duration-200"
+                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-[#0c4a3e] focus:outline-none transition-all duration-200"
                   >
                     <option value="Belajar">Belajar</option>
                     <option value="Kegiatan">Kegiatan</option>
@@ -310,7 +310,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-[#0c4a3e]/70 uppercase tracking-wider mb-2">
                   Konten / Isi Postingan
                 </label>
                 <textarea
@@ -319,7 +319,7 @@ export default function CommunityForumPage({ onNavigate, showToast }) {
                   value={newContent}
                   onChange={(e) => setNewContent(e.target.value)}
                   required
-                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-primary-500 focus:outline-none transition-all duration-200"
+                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl text-slate-900 text-sm focus:bg-white focus:border-[#0c4a3e] focus:outline-none transition-all duration-200"
                 />
               </div>
 
